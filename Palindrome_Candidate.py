@@ -1,6 +1,7 @@
+#Python3 implementation to check if input string can be rearranged to form a palindrome or not
 def f_cnt_odd(plst_unique, plst_full):
     #Get count of character's odd times and even times appearence
-    veven = vodd = 0;
+    vodd = 0
     for ch in plst_unique:
         if plst_full.count(ch) % 2 == 1:
             vodd+=1
@@ -11,10 +12,9 @@ def f_detect_palindrome(pstr):
     vlst_str = list(pstr)
     vlst_str_unique = list(set(vlst_str))
     vodd = f_cnt_odd(vlst_str_unique, vlst_str)
-    print(vodd)
     if vodd <= 1:
         return "Can be Palindrome"
     else:
         return "Can't be Palindrome"
 
-print(f_detect_palindrome("never odd or even"));
+print(f_detect_palindrome("never odd or even"))
